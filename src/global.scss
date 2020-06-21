@@ -24,3 +24,55 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import "./assets/css/global.css";
+@import "./assets/libs/bootstrap/css/bootstrap.css";
+
+ion-toolbar{
+    --background: #fff !important;
+}
+
+ion-back-button{
+    --color:teal !important;
+}
+
+// ion-content{
+//     --ion-background-color: #fff;
+//     --ion-color: #ffffff;
+//     font-family: 'TTNormsMedium';
+// }
+
+.confirm-modal {
+    // transition: opacity .25s ease-in-out !important;
+    transition: opacity .25s ease-in-out !important;
+    padding: 40vh 5vw !important;
+
+    --border-radius: 0px !important;
+}
+
+
+.modal-wrapper{
+    border-radius: 20px !important;
+}
+
+.reduce-modal {
+    transition: opacity .25s ease-in-out !important;
+    padding: 15vh 5vw !important;
+}
+
+.ms_back_button{
+    position: absolute;
+    display: block;
+    margin-top: 3vh;
+    margin-left: -5%;
+    z-index: 999999;
+    font-size: 25px;
+}
+
+.ms_back_button{
+    position: absolute;
+    display: block;
+    margin-top: 3vh;
+    margin-left: -5%;
+    z-index: 999999;
+    font-size: 25px;
+}

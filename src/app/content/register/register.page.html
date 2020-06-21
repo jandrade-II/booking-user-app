@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ms-login-image">
+    <div class="ms-mob-footer-login">
+
+      <form [formGroup]="registerForm" novalidate padding>
+
+        <ion-item class="masahista-form" > 
+            <ion-input  type="email" placeholder="Email"  formControlName="email"> </ion-input>
+        </ion-item>
+
+        <ion-item class="masahista-form" > 
+          <ion-input  type="number" placeholder="Contact No."  formControlName="contactNo"> </ion-input>
+        </ion-item>
+
+        <ion-item class="masahista-form" > 
+            <ion-input  type="text" placeholder="First Name"  formControlName="firstName"> </ion-input>
+        </ion-item>
+
+        <ion-item class="masahista-form" > 
+          <ion-input  type="text" placeholder="Last Name"  formControlName="lastName"> </ion-input>
+        </ion-item>
+
+        <ion-item class="masahista-form" > 
+          <ion-input  type="text" placeholder="Address"  formControlName="address"> </ion-input>
+        </ion-item>
+
+        <ion-item class="masahista-form">
+              <ion-input  type="password" placeholder="Password" formControlName="password"> </ion-input>
+        </ion-item>
+
+        <ion-item class="masahista-form">
+          <ion-input  type="password" placeholder="Confirm Password" formControlName="confirmPassword"> </ion-input>
+        </ion-item>
+
+
+        <p class="ms-info-error" *ngIf="registerForm.errors?.mismatchedFields">Passwords do not match</p>
+        <button class="ms-btn ms-full-width" 
+                [ngClass] ="registerForm.valid ? 'ms-btn-primary': 'ms-btn-disabled' " (click)="register()" [disabled]="!registerForm.valid" >Register</button>
+        <br/>
+        <br/>
+
+        <button class="ms-btn ms-full-width ms-btn-secondary" 
+                 (click)="login()" >Back to Login Page</button>
+   
+   
+      </form>
+      <p class="ms-login-footnote">
+          we will only require your name and email address.
+      </p>
+    </div>
+  </div>
+ 
+</ion-content>

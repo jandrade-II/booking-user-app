@@ -1,0 +1,80 @@
+.ms-login-footnote {
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: white !important;
+}
+
+.ms-btn {
+    display: inline-block;
+    text-align: center !important;
+    vertical-align: middle;
+    user-select: none;
+    padding: 10px 50px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 5px;
+    color: white !important;
+    font-weight: 600;
+}
+
+.ms-mob-footer-login {
+    // position: fixed;
+    bottom: 0em;
+    margin-right: 2em;
+    width: 100%;
+    padding: 1em;
+    // background-color: white;
+    // transition: opacity .25s ease-in-out;
+}
+
+.ms-login-image {
+    // background-image:  url("/assets/images/login_image.jpg");
+    background-position:  center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;;
+}
+
+.ms-login-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 6em;
+    margin-top: 0;
+}
+
+.ms-icon-btn {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.ms-full-width {
+    width: 100% !important;
+}
+
+.ms-btn-tertiary {
+    background: #4267b2; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #4267b2 0%, #1b428e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #4267b2 0%,#1b428e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #4267b2 0%,#1b428e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4267b2', endColorstr='#1b428e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.ms-btn-alert {
+    background: #ea4335; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #ea4335 0%, #cf3c2f 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #ea4335 0%,#cf3c2f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #ea4335 0%,#cf3c2f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea4335', endColorstr='#cf3c2f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.ms-login-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 6em;
+    margin-top: 0;
+}

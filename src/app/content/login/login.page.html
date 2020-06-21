@@ -1,0 +1,38 @@
+<ion-header>
+  <!-- <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content>
+  <div class="ms-login-image">
+    <img src="assets/icon/logo_only_transp.png" class="ms-login-logo" />
+    <div class="ms-mob-footer-login">
+
+      <form [formGroup]="loginForm" novalidate padding>
+
+        <ion-item class="masahista-form" > 
+            <ion-input  type="email" placeholder="Email"  formControlName="email"> </ion-input>
+        </ion-item>
+
+        <ion-item class="masahista-form">
+              <ion-input  type="password" placeholder="Password" formControlName="password"> </ion-input>
+        </ion-item>
+
+        <button class="ms-btn ms-full-width" 
+                [ngClass] ="loginForm.valid ? 'ms-btn-primary': '' " (click)="login()" [disabled]="!loginForm.valid" >Login</button>
+        <br/>
+        <br/>
+
+        <button class="ms-btn ms-full-width ms-btn-secondary" 
+                 (click)="register()" >Register</button>
+   
+   
+      </form>
+      <p class="ms-login-footnote">
+          we will only require your name and email address.
+      </p>
+    </div>
+  </div>
+ 
+</ion-content>

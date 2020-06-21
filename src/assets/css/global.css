@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'TTNormsMedium';
+    src: url('../fonts/TTNorms-Medium.otf');
+}
+
+@font-face {
+    font-family: 'TTNormsBold';
+    src: url('../fonts/TTNorms-Bold.otf')
+}
+
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'TTNormsMedium';
+}
+
+/* div {
+    color: #505050;
+} */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+a, p, button, input {
+    /* text-transform: lowercase; */
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.ms-btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    padding: 10px 50px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 5px;
+    color: white !important;
+    font-weight: 600;
+}
+
+.ms-btn-primary {
+    background: #45cdcf; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #45cdcf 0%, #92f3bf 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #45cdcf 0%,#92f3bf 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #45cdcf 0%,#92f3bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45cdcf', endColorstr='#92f3bf',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.ms-btn-secondary {
+    background: #fbb844; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #fbb844 0%, #fce045 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #fbb844 0%,#fce045 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #fbb844 0%,#fce045 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbb844', endColorstr='#fce045',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.ms-btn-disabled {
+    background: #e7e7e7; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #e7e7e7 0%, #e7e7e7 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #e7e7e7 0%,#e7e7e7 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #e7e7e7 0%,#e7e7e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.ms-btn-tertiary {
+    background: #4267b2; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #4267b2 0%, #1b428e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #4267b2 0%,#1b428e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #4267b2 0%,#1b428e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4267b2', endColorstr='#1b428e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.ms-btn-alert {
+    background: #ea4335; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #ea4335 0%, #cf3c2f 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #ea4335 0%,#cf3c2f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #ea4335 0%,#cf3c2f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea4335', endColorstr='#cf3c2f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.ms-btn:hover {
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.ms-full-width {
+    width: 100% !important;
+}
+
+.ms-login-wrapper {
+    position:fixed;
+    top: 40%;
+    left: 50%;
+    width:30em;
+    height:18em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+}
+
+.ms-admin-login-label {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'TTNormsBold';
+    margin-bottom: 30px;
+}
+
+.ms-login-logo {
+    width: 110px;
+    margin: 20px auto;
+    display: block;
+}
+
+.ms-form {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.masahista-form {
+    margin-bottom: 10px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.ms-form:focus {
+    border-color: #45cdcf;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.error {
+    border-bottom-color: red !important;
+}
+
+.ms-info-error {
+    color: red;
+}
