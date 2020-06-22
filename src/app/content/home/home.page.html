@@ -1,8 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button (click)="goToPage('/profile-setting')"> 
+        <ion-icon slot="icon-only" name="person-circle"  ></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon   slot="icon-only" name="calendar-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Default Buttons</ion-title>
   </ion-toolbar>
 </ion-header>
 

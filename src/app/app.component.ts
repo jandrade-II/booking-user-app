@@ -35,6 +35,7 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.storage.get(key_name.user).then((val:UserInfo)=>{
+        console.log('initializeApp', val)
         if(val) {
           this.userServe.setUser(val)
           this.router.navigate(["/home"]);

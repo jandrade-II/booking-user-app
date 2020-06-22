@@ -32,8 +32,8 @@ export class UserService {
     )
   }
 
-  async login(creds: Creds) {
-    await this.afAuth.auth.signInWithEmailAndPassword(creds.email, creds.password).then(async (result)=>{
+  async login(user: UserInfo) {
+    await this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password).then(async (result)=>{
         this.authenticate(result.user)
     }).catch((err)=>{
       this.createErrorMsg('Error Message', err.message)
@@ -43,17 +43,17 @@ export class UserService {
 
   authenticate(user: firebase.User) {
     this.userCollection.doc(user.uid)
-      .valueChanges().subscribe((res:any)=>{
+      .valueChanges().subscribe((res:UserInfo)=>{
+        console.log('user:', res)
         if(res) {
           if(/*adminuser.emailVerified*/ true) {
-            // res.id = adminuser.uid;
-            // this.spaUser.next(res);
+            res.userId = user.uid;
+            this.user.next(res);
           } else {
             this.createErrorMsg('Warning Message', 'Email is not verified');
           }
         } else {
           this.createErrorMsg('Error Message', 'No user found with the inputted email and password!');
-
         }
       
     },(err)=>{
@@ -65,19 +65,27 @@ export class UserService {
     let that = this;
      this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password).then(async (result)=>{
         user.userId = result.user.uid;
-        that.userCollection.doc(user.userId).set(user)
-        .then(async ()=>{
-          that.user.next(user)
-        })
-        .catch((err)=>{
+        result.user.sendEmailVerification().then(function() {
+          that.userCollection.doc(user.userId).set(user)
+          .then(async ()=>{
+            that.user.next(user)
+          })
+          .catch((err)=>{
+            console.log(err)
+            that.createErrorMsg('Error Message', err.message)
+          });
+        }).catch((err)=>{
           console.log(err)
           that.createErrorMsg('Error Message', err.message)
-        });
+        })
       }).catch((err)=>{
         this.createErrorMsg('Error Message', err.message)
       })
   }
 
+  async logout() {
+   return await this.afAuth.auth.signOut()
+  }
   
   createErrorMsg(errorTitle, errorMsg) {
     let error = {} as ErrorMsg;
@@ -96,6 +104,10 @@ export class UserService {
 
   setUser(user: UserInfo) {
     this.user.next(user)
+  }
+
+  setErrorMsg(errorMsg: ErrorMsg) {
+    this.errorMsg.next(errorMsg);
   }
 
 

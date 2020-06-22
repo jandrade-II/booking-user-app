@@ -24,7 +24,7 @@ export class RegisterPage implements OnInit, OnDestroy {
   constructor(
     private formBuilder: FormBuilder, 
     private router: Router,
-    public loadingCtrl: LoadingController,
+    private loadingCtrl: LoadingController,
     private userServe: UserService,
     private storage: Storage,
     private toastServe: ToastService,
@@ -43,7 +43,10 @@ export class RegisterPage implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.getSubscriber();  
+    this.getSubscriber();
+  }
+
+  ionViewDidEnter() {
   }
 
 
@@ -95,13 +98,11 @@ export class RegisterPage implements OnInit, OnDestroy {
      .subscribe(async(errorMsg: ErrorMsg)=>{
        await this.dismissAllLoaders()
        if(Object.keys(errorMsg).length > 0) {
-         console.log('errorMsg:', errorMsg)
          this.toastServe.presentToast(errorMsg.message, 'bottom', 'danger' )
+         this.userServe.setErrorMsg({});
        }
      })
-     
-
-   }
+  }
 
   login() {
     this.router.navigate(['/login'])
@@ -133,6 +134,10 @@ export class RegisterPage implements OnInit, OnDestroy {
       () => this.loadingCtrl.getTop().then(topLoader => topLoader != null),
       () => this.loadingCtrl.dismiss()
     );
+  }
+
+  ionViewDidLeave() {
+
   }
 
   ngOnDestroy() {
